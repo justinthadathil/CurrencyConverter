@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurencyService } from './Service/curency.service';
-import { curencyResp } from './curency-model';
+import { curencyModel } from './curency-model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
 
-  storeData: curencyResp;
+  storeData: curencyModel;
   getCurencyValue: FormGroup;
   destinationCurrency: string[];
   isSubmitted: Boolean = false;
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    let initalValue: curencyResp;
+    let initalValue: curencyModel;
     this.curencyService.getLatestRates().subscribe({
       next: (value) => {
         initalValue = value;

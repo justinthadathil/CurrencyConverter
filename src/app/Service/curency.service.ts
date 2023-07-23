@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { curencyResp } from '../curency-model';
+import { curencyModel } from '../curency-model';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -15,7 +15,7 @@ export class CurencyService {
     private http: HttpClient
   ) { }
 
-  getLatestRates(): Observable<curencyResp>{
-    return this.http.get<curencyResp>(`${this.fixerLatest}`)
+  getLatestRates(): Observable<curencyModel>{
+    return this.http.get<curencyModel>(`${this.fixerLatest}`)
   }
 }

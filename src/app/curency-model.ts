@@ -1,4 +1,4 @@
-export interface curencyResp {
+export interface curencyModel {
   success: boolean
   timestamp: number
   base: string
