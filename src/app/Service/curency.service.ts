@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { curencyModel } from '../curency-model';
+import { curencyModel } from '../curency.model';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';

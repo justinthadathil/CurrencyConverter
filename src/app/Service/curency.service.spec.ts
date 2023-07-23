@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { CurencyService } from './curency.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'
-import { curencyModel } from '../curency-model';
+import { curencyModel } from '../curency.model';
 import { environment } from 'src/environments/environment.development';
 
 describe('CurencyService', () => {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurencyService } from './Service/curency.service';
-import { curencyModel } from './curency-model';
+import { curencyModel } from './curency.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -31,7 +31,6 @@ export class AppComponent implements OnInit{
         initalValue = value;
       },
       complete: () => {
-        console.log(initalValue)
         this.storeData = initalValue;
         if(initalValue.success){
           const keysArray = [];
