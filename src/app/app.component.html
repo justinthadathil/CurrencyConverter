@@ -17,12 +17,7 @@
             </div>
             <div class="col">
               <label for="forDestination">Destination Currency</label>
-              <!-- <select id="forDestination" class="form-control" formControlName="destCurrency">
-                <option *ngFor="let currency of destinationCurrency" [value]="currency">
-                  {{currency}}
-                </option>
-              </select> -->
-              <ejs-dropdownlist formControlName="destCurrency" placeholder="Please Select a Currency" [allowFiltering]='true' [dataSource]='destinationCurrency'></ejs-dropdownlist>
+              <ejs-dropdownlist formControlName="destCurrency" placeholder="Please Select a Currency" [allowFiltering]='true' [dataSource]='destinationCurrency' class="ejsDrop"></ejs-dropdownlist>
               <small *ngIf="getCurencyValue.controls['destCurrency'].hasError('required') && isSubmitted" class="form-text text-muted errorCode">Destination Currency is required.</small>
             </div>
           </div>
