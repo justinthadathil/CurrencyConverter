@@ -17,8 +17,6 @@ export class AppComponent implements OnInit{
   serverError: Boolean = false;
   finalText: string = '';
 
-  memberAreaData = ['hysjs', 'sjss']
-
   constructor(
     public curencyService: CurencyService,
     public formBuilder: FormBuilder,

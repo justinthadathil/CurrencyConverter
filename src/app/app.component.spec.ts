@@ -2,11 +2,19 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule,
+        DropDownListModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       declarations: [
         AppComponent
@@ -20,16 +28,12 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'CurrencyConverter'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('CurrencyConverter');
-  });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('CurrencyConverter app is running!');
+    expect(compiled.querySelector('.card-title')?.textContent).toContain('Currency Converter');
   });
+
+
 });
