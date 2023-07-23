@@ -6,7 +6,7 @@
   margin-bottom: 0px;
   text-align: center;
   padding: 17px;
-  border-bottom: 1px solid;
+  border-bottom: 3px solid #d9d7d1;
 }
 
 .errorCode{
@@ -14,7 +14,11 @@
 }
 
 .marTop{
-  margin-top: 25px;
+  margin-top: 15px;
+}
+
+.marTop30{
+  margin-top: 30px;
 }
 
 .text-center{
@@ -22,8 +26,48 @@
 }
 
 .sourceTxt{
-  border: 1px solid #dee2e6;
+  border: 1px solid #d9d7d1;
   margin-bottom: 0px;
   border-radius: 5px;
   padding: 6px;
+}
+
+.font15{
+  font-size: 15px;
+}
+
+.btnst{
+  width: 150px;
+}
+
+.resultp{
+  margin-bottom: 0px;
+  border-radius: 7px;
+  border: 1px solid #d9d7d1;
+  padding: 11px;
+}
+
+.wid{
+  width: -webkit-fill-available;
+}
+
+.verticalcen{
+  display: grid;
+  place-items: center;
+}
+
+.cardBx{
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.datetag{
+  position: absolute;
+  right: -1px;
+  font-size: 9px;
+  top: 50px;
+  background: #212529;
+  color: #eceeef;
+  padding: 2px 6px;
+  border-radius: 8px 0px 0px 8px;
 }

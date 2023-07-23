@@ -1,9 +1,10 @@
-<div class="container">
-  <div class="row justcen">
-    <div class="col-5">
-      <div class="card">
+<div class="container verticalcen" [style.height.px]="getHeight()">
+  <div class="row justcen wid">
+    <div class="col-12 col-md-5">
+      <div class="card cardBx">
         <h5 class="card-title extTitle">Currency Converter</h5>
-        <div class="card-body" [formGroup]="getCurencyValue">
+        <div class="card-body" [formGroup]="getCurencyValue" *ngIf="!serverError">
+          <div class="datetag">Date: {{storeData?.date | date: 'dd/MM/yyyy'}}</div>
           <div class="form-group">
             <label for="forAmount">Enter Amount</label>
             <input type="number" formControlName="amount" class="form-control" id="forAmount" placeholder="Please enter the amount">
@@ -25,30 +26,24 @@
             </div>
           </div>
           <div class="row marTop text-center">
+            <div class="col-12 marTop" *ngIf="finalText !== ''">
+              <p class="resultp">{{finalText}}</p>
+            </div>
+          </div>
+          <div class="row marTop30 text-center">
             <div class="col">
-              <button type="button" class="btn btn-primary" (click)="submitValue()">Submit</button>
+              <button type="button" class="btn btn-dark btnst" (click)="submitValue()">Submit</button>
             </div>
             <div class="col">
-              <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+              <button type="button" class="btn btn-secondary btnst" (click)="resetForm()">Reset</button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">{{storeData?.error?.type}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>{{storeData?.error?.info}}</p>
+        <div class="card-body text-center" *ngIf="serverError">
+          <h1 class="font15">Server Error: {{storeData?.error?.type}}</h1>
+          <p>{{storeData?.error?.info}}</p>
+        </div>
       </div>
     </div>
   </div>
