@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DropDownListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
